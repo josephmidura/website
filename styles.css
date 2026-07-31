@@ -82,3 +82,8 @@ hr {
   border: 1px solid;
   margin: 32px 0;
 }
+
+.centered {
+  text-align: center;
+  margin: 24px 0 24px 0;
+}
