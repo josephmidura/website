@@ -1,39 +1,54 @@
+/* Common colors */
+:root {
+  --highlight-yellow: #ac8300;
+  --highlight-orange: #d56500;
+  --highlight-red: #f23749;
+  --highlight-magenta: #dd459d;
+  --highlight-violet: #7d80d1;
+  --highlight-blue: #2b90d8;
+  --highlight-cyan: #259d94;
+  --highlight-green: #819500;
+}
+
+/* Light palette */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #ffffff;
+    --color-text: #161616;
+    --color-link: var(--highlight-blue); 
+    --color-hover: var(--highlight-cyan);
+  }
+}
+
+
+/* Dark palette */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #002d38;
+    --color-text: #f1e9d2;
+    --color-link: var(--highlight-blue); 
+    --color-hover: var(--highlight-cyan);
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+
 body {
   font-size: 16px;
   line-height: 22px;
   font-family: sans-serif;
   width: 540px;
   margin: 42px auto;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
-@media (prefers-color-scheme: light) {
-  body {
-    background: #ffffff;
-    color: #161616;
-  }
-
-  a {
-    color: #1b2abf;
-  }
-
-  a:hover {
-    color: #1b5bbf;
-  }
+a {
+  color: var(--color-link);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #161616;
-    color: #eeeeee;
-  }
-
-  a {
-    color: #0c98f5;
-  }
-
-  a:hover {
-    color: #88c9f3;
-  }
+a:hover {
+  color: var(--color-hover);
 }
 
 h1,
